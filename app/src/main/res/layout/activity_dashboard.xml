@@ -30,6 +30,20 @@
         android:background="@color/colorPrimary"
         android:textColor="@android:color/white"
         android:text="Logout"
-        android:onClick="callLogout"/>
+        android:onClick="callLogout"
+        android:id="@+id/button" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="23dp"
+        android:clickable="true"
+        android:onClick="callSettingsForm"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_menu_manage" />
+
 
 </RelativeLayout>

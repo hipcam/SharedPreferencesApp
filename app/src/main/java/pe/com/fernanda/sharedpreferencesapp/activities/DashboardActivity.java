@@ -1,5 +1,7 @@
 package pe.com.fernanda.sharedpreferencesapp.activities;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 import pe.com.fernanda.sharedpreferencesapp.R;
 import pe.com.fernanda.sharedpreferencesapp.models.User;
 import pe.com.fernanda.sharedpreferencesapp.repositories.UserRepository;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -48,6 +51,12 @@ public class DashboardActivity extends AppCompatActivity {
 
         finish();
     }
-
-
+    public void callSettingsForm(View view){
+        Intent intent = new Intent(this, MyPreferencesActivity.class);
+        startActivity(intent);
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 }
